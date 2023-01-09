@@ -1,2 +1,3 @@
 Welcome GEMS2023 to GIT Session!
 Today's session timing 11 - 1
+Bug 123 fixed here
