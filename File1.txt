@@ -2,3 +2,4 @@ Welcome GEMS2023  -to GIT Session! ***********
 Today's session timing - 11:00AM - 1:00 PM.**********
 Bug 123 - fixed  here.*****
 Bug456 - fixed here in this line.
+cr2 implemented here.
