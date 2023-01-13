@@ -1,0 +1,665 @@
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23
+$ git init
+Initialized empty Git repository in D:/RBTs/GITRecap9Jan23/.git/
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git commit -m "WI1: File1 added with a welcome Msg."
+[master (root-commit) 6fd952f] WI1: File1 added with a welcome Msg.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File1.txt
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log
+commit 6fd952fe783e5174b7f1c66277f5cbf172840456 (HEAD -> master)
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:23:01 2023 +0530
+
+    WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git add File1.txt
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git commit
+hint: Waiting for your editor to close the file... unix2dos: converting file D:/RBTs/GITRecap9Jan23/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file D:/RBTs/GITRecap9Jan23/.git/COMMIT_EDITMSG to Unix format...
+[master 1a96061] WI1: File1 updated with session timings.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log
+commit 1a96061f89ea616a8dd08712290dab0ef3437575 (HEAD -> master)
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:24:25 2023 +0530
+
+    WI1: File1 updated with session timings.
+
+commit 6fd952fe783e5174b7f1c66277f5cbf172840456
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:23:01 2023 +0530
+
+    WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline
+1a96061 (HEAD -> master) WI1: File1 updated with session timings.
+6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --author="Renuka"
+commit 1a96061f89ea616a8dd08712290dab0ef3437575 (HEAD -> master)
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:24:25 2023 +0530
+
+    WI1: File1 updated with session timings.
+
+commit 6fd952fe783e5174b7f1c66277f5cbf172840456
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:23:01 2023 +0530
+
+    WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --author="Renuka" --oneline
+1a96061 (HEAD -> master) WI1: File1 updated with session timings.
+6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --grep="Msg"
+commit 6fd952fe783e5174b7f1c66277f5cbf172840456
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:23:01 2023 +0530
+
+    WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --grep="Msg" --oneline
+6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log File1.txt
+commit 1a96061f89ea616a8dd08712290dab0ef3437575 (HEAD -> master)
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:24:25 2023 +0530
+
+    WI1: File1 updated with session timings.
+
+commit 6fd952fe783e5174b7f1c66277f5cbf172840456
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:23:01 2023 +0530
+
+    WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log File1.txt --oneline
+fatal: option '--oneline' must come before non-option arguments
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --help
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* 1a96061 (HEAD -> master) WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git branch
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git branch Bug123
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git branch
+  Bug123
+* master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git checkout Bug123
+Switched to branch 'Bug123'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug123)
+$ git log --oneline --decorate --graph
+* 1a96061 (HEAD -> Bug123, master) WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug123)
+$ git status
+On branch Bug123
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug123)
+$ git commit -am "Bug123:File1 updated to fix the bug123."
+[Bug123 3f6694c] Bug123:File1 updated to fix the bug123.
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug123)
+$ git status
+On branch Bug123
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug123)
+$ git log --oneline --decorate --graph
+* 3f6694c (HEAD -> Bug123) Bug123:File1 updated to fix the bug123.
+* 1a96061 (master) WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug123)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git merge Bug123
+Updating 1a96061..3f6694c
+Fast-forward
+ File1.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git branch -d Bug123
+Deleted branch Bug123 (was 3f6694c).
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git checkout -b Bug456
+Switched to a new branch 'Bug456'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git branch
+* Bug456
+  master
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git status
+On branch Bug456
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git log --oneline --decorate --graph
+* 3f6694c (HEAD -> Bug456, master) Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git commit -am "Bug456: File1 updated to fix bug456. To study 3way merge."
+[Bug456 e897c2c] Bug456: File1 updated to fix bug456. To study 3way merge.
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git status
+On branch Bug456
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git log --oneline --decorate --graph
+* e897c2c (HEAD -> Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* 3f6694c (master) Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (Bug456)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git commit -am "CR1: File1 updated with * to study 3way merge with conflicts."
+[master 0218baf] CR1: File1 updated with * to study 3way merge with conflicts.
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* 0218baf (HEAD -> master) CR1: File1 updated with * to study 3way merge with conflicts.
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git merge Bug456
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master|MERGING)
+$ git commit -am "Conflict:Resolved for CR1 and Bug456."
+[master 427b43f] Conflict:Resolved for CR1 and Bug456.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+*   427b43f (HEAD -> master) Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log
+commit 427b43fd0434fcfd0f25ff2fffc46fa1f499d97c (HEAD -> master)
+Merge: 0218baf e897c2c
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:46:46 2023 +0530
+
+    Conflict:Resolved for CR1 and Bug456.
+
+commit 0218baf84b5d1b916806f9759ccdc2a95ffebbcc
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:43:18 2023 +0530
+
+    CR1: File1 updated with * to study 3way merge with conflicts.
+
+commit e897c2c1ba110c29ee23e4268571a8ed7453b1e5 (Bug456)
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:41:39 2023 +0530
+
+    Bug456: File1 updated to fix bug456. To study 3way merge.
+
+commit 3f6694c8536f7d44c6c71e5a116bd31d3ecd492f
+Author: Renuka <renuka_kulkarni@persistent.com>
+Date:   Mon Jan 9 11:33:56 2023 +0530
+
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+*   427b43f (HEAD -> master) Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git checkout -b CR2
+Switched to a new branch 'CR2'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git status
+On branch CR2
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git log --oneline --decorate --graph
+*   427b43f (HEAD -> CR2, master) Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git status
+On branch CR2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git log --oneline --decorate --graph
+*   427b43f (HEAD -> CR2, master) Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git commit -am "CR2: File1 updated for rebase with Conflict."
+[CR2 10ab12b] CR2: File1 updated for rebase with Conflict.
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git status
+On branch CR2
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git log --oneline --decorate --graph
+* 10ab12b (HEAD -> CR2) CR2: File1 updated for rebase with Conflict.
+*   427b43f (master) Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+*   427b43f (HEAD -> master) Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git commit -am "WI2: File1 updated to check rebase with Conflict."
+[master 96cf2d5] WI2: File1 updated to check rebase with Conflict.
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* 96cf2d5 (HEAD -> master) WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git checkout CR2
+Switched to branch 'CR2'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git log --oneline --decorate --graph
+* 10ab12b (HEAD -> CR2) CR2: File1 updated for rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git rebase master
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+error: could not apply 10ab12b... CR2: File1 updated for rebase with Conflict.
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 10ab12b... CR2: File1 updated for rebase with Conflict.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2|REBASE 1/1)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2|REBASE 1/1)
+$ git rebase --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file D:/RBTs/GITRecap9Jan23/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file D:/RBTs/GITRecap9Jan23/.git/COMMIT_EDITMSG to Unix format...
+[detached HEAD 5307eaf] Conflicts resolved in the File1 for CR2 and WI2.
+ 1 file changed, 1 insertion(+)
+Successfully rebased and updated refs/heads/CR2.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git status
+On branch CR2
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git log --oneline --decorate --graph
+* 5307eaf (HEAD -> CR2) Conflicts resolved in the File1 for CR2 and WI2.
+* 96cf2d5 (master) WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (CR2)
+$ git checkout master
+Switched to branch 'master'
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* 96cf2d5 (HEAD -> master) WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git merge CR2
+Updating 96cf2d5..5307eaf
+Fast-forward
+ File1.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* 5307eaf (HEAD -> master, CR2) Conflicts resolved in the File1 for CR2 and WI2.
+* 96cf2d5 WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git checkout --help
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git stash save
+Saved working directory and index state WIP on master: 5307eaf Conflicts resolved in the File1 for CR2 and WI2.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git stash list
+stash@{0}: WIP on master: 5307eaf Conflicts resolved in the File1 for CR2 and WI2.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git stash pop
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (f622380a08cdf7303bae17bccf95cae6d71ef563)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git commit -am "WI3: Stash changes are completed."
+[master f2799a2] WI3: Stash changes are completed.
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* f2799a2 (HEAD -> master) WI3: Stash changes are completed.
+* 5307eaf (CR2) Conflicts resolved in the File1 for CR2 and WI2.
+* 96cf2d5 WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git revert 96cf2d5
+Auto-merging File1.txt
+CONFLICT (content): Merge conflict in File1.txt
+error: could not revert 96cf2d5... WI2: File1 updated to check rebase with Conflict.
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master|REVERTING)
+$ git add .
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master|REVERTING)
+$ git revert --continue
+hint: Waiting for your editor to close the file... unix2dos: converting file D:/RBTs/GITRecap9Jan23/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file D:/RBTs/GITRecap9Jan23/.git/COMMIT_EDITMSG to Unix format...
+[master d2a7413] Revert "WI2: File1 updated to check rebase with Conflict." for so and so reason....
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git log --oneline --decorate --graph
+* d2a7413 (HEAD -> master) Revert "WI2: File1 updated to check rebase with Conflict." for so and so reason....
+* f2799a2 WI3: Stash changes are completed.
+* 5307eaf (CR2) Conflicts resolved in the File1 for CR2 and WI2.
+* 96cf2d5 WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git remote add origin https://github.com/RenukaMKulkarni/GITRecap9Jan23.git
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git remove
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git remote -v
+origin  https://github.com/RenukaMKulkarni/GITRecap9Jan23.git (fetch)
+origin  https://github.com/RenukaMKulkarni/GITRecap9Jan23.git (push)
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (master)
+$ git branch -M main
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (main)
+$ git log --oneline --decorate --graph
+* d2a7413 (HEAD -> main) Revert "WI2: File1 updated to check rebase with Conflict." for so and so reason....
+* f2799a2 WI3: Stash changes are completed.
+* 5307eaf (CR2) Conflicts resolved in the File1 for CR2 and WI2.
+* 96cf2d5 WI2: File1 updated to check rebase with Conflict.
+*   427b43f Conflict:Resolved for CR1 and Bug456.
+|\
+| * e897c2c (Bug456) Bug456: File1 updated to fix bug456. To study 3way merge.
+* | 0218baf CR1: File1 updated with * to study 3way merge with conflicts.
+|/
+* 3f6694c Bug123:File1 updated to fix the bug123.
+* 1a96061 WI1: File1 updated with session timings.
+* 6fd952f WI1: File1 added with a welcome Msg.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (main)
+$ git push -u origin main
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (30/30), 2.98 KiB | 763.00 KiB/s, done.
+Total 30 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/RenukaMKulkarni/GITRecap9Jan23.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+renuka_kulkarni@PSL-6KHCDN3 MINGW64 /d/RBTs/GITRecap9Jan23 (main)
